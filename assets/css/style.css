@@ -42,6 +42,8 @@
 
 }
 
+
+
 :root {
 
     /**
@@ -191,6 +193,17 @@ html {
 .btn-secondary:hover {
     border-color: var(--accent);
 }
+
+/*-----------------------------------*\ 
+  #EXTRA STYLE FOR DARK THEME
+\*-----------------------------------*/
+.dark-theme .btn-primary:hover { color: var(--background-primary)};
+
+.dark-theme .blog-topic {
+    background: var(--action-primary);
+    color: var(--foreground-secondary)
+}
+
 
 
 /*-----------------------------------*\ 
@@ -346,9 +359,16 @@ header .btn-group {
 }
 
 .hero .right {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.about-img {
+    border-radius: 10px;
+    max-width: 70%;
+    transition: .3s;
+}
 
 /*----------------------*\
     #BLOG SECTION
@@ -550,6 +570,10 @@ footer .wrapper {
     :root {
         --fs-base: 0.90rem;
     }
+       /*HERO*/
+    #john-img {
+        display: none;
+    }
 
     /*BLOG*/
 
@@ -591,6 +615,10 @@ footer .wrapper {
 
     .navbar {
         padding: 30px 0
+    }
+    /*HERO*/
+    #john-img {
+        display: none;
     }
 
     /* BLOG */
@@ -684,6 +712,9 @@ footer .wrapper {
 
     .container {
         max-width: 800px;
+    }
+    #john-img {
+        display: flex;
     }
 }
 
@@ -864,9 +895,11 @@ footer .wrapper {
         box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.05);
     }
 
-    .topics {margin-bottom: 3rem;}
+    .topics {
+        margin-bottom: 3rem;
+    }
 
-    .topic-btn{
+    .topic-btn {
         display: flex;
         align-items: stretch;
         background: var(--background-primary);
@@ -875,7 +908,9 @@ footer .wrapper {
         overflow: hidden;
     }
 
-    .topic-btn:not(last-child) {margin-bottom: 1rem;}
+    .topic-btn:not(last-child) {
+        margin-bottom: 1rem;
+    }
 
     .topic-btn .icon-box {
         font-size: 22px;
@@ -892,8 +927,10 @@ footer .wrapper {
         color: var(--white);
 
     }
-    
-    .topic-btn ion-icon {--ionicon-stroke-width: 40px;}
+
+    .topic-btn ion-icon {
+        --ionicon-stroke-width: 40px;
+    }
 
     .topic-btn p {
         padding: 15px;
@@ -901,7 +938,9 @@ footer .wrapper {
         font-weight: 700;
     }
 
-    .tags { margin-bottom: 3rem;}
+    .tags {
+        margin-bottom: 3rem;
+    }
 
     .tags .wrapper {
         display: flex;
@@ -923,7 +962,9 @@ footer .wrapper {
         color: var(--action-primary);
     }
 
-    .contact { margin-bottom: 3rem;}
+    .contact {
+        margin-bottom: 3rem;
+    }
 
     .contact p {
         color: var(--foreground-secondary);
@@ -948,7 +989,58 @@ footer .wrapper {
         font-size: 22px;
     }
 
-    .social-link .linkedin { color: hsl(213, 78%, 51%);}
+    .social-link .linkedin {
+        color: hsl(213, 78%, 51%);
+    }
 
-    .social-link .github { color: hsl(0, 0%, 0%);}
+    .social-link .github {
+        color: hsl(0, 0%, 0%);
+    }
+
+    .social-link .icon-box:hover {
+        background: var(--accent);
+        color: var(--white)
+    }
+
+    .newletter {
+        position: sticky;
+        top: 1rem;
+        margin-bottom: 98px;
+    }
+
+    .newletter p {
+        color: var(--foreground-secondary);
+        margin-bottom: 1rem;
+    }
+
+    .newletter input {
+        border: none;
+        background: var(--action-secondary);
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        font: inherit;
+        color: var(--foreground-secondary);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter input::placeholder {
+        color: inherit;
+    }
+
+    .newsletter input:focus {
+        outline: 2px solid;
+        outline-offset: 0;
+    }
+
+    .newsletter .btn-primary {
+        margin-inline: auto;
+        margin: auto;
+    }
+
+
+    /*FOOTER*/
+
+    .footer-title { font-size: 1.125rem}
 }
